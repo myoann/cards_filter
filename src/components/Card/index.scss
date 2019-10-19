@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  width: 23%;
+  width: calc(23% - 8px - 2px);
   height: 100px;
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.05);
   padding: 10px;
