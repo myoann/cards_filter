@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import * as actions from '../../actions';
 import { ReactComponent as MagnifierIcon } from '../../assets/magnifier.svg';
-import './index.css';
+import './index.scss';
 
 function Search({ searchResults }) {
   return (

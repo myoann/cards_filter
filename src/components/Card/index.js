@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { useHistory, withRouter } from 'react-router-dom';
 
 import Tag from '../Tag/';
-import './index.css';
+import './index.scss';
 
 function Card({ _id, name, tags }) {
   const history = useHistory();

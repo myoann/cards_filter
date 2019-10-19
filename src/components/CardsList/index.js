@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import * as actions from '../../actions';
 
-import './index.css';
+import './index.scss';
 import Card from '../Card/';
 
 const mapStateToProps = ({ jsonResults }) => ({
