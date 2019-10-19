@@ -1,0 +1,36 @@
+.searchBar {
+    display: flex;
+    margin: 10px 30px 0 30px;
+    border: 2px solid #ECECEC;
+    height: 52px;
+    font-size: 14px;
+}
+
+.searchIconBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border-right: 1px solid #ECECEC;
+}
+
+.magnifierIcon {
+    width: 26px;
+}
+
+.searchInputBox {
+    display: inline-block;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.searchInputBox input {
+    width: 100%;
+    height: 50px;
+    border: 0px;
+}
+
+.searchInputBox input:focus{
+    outline: none;
+}
