@@ -24,12 +24,12 @@ export class CardsList extends Component {
     const { jsonResults, loading } = this.props;
 
     return (
-      <div className="cardsContainer">
+      <main className="cardscontainer">
         {!loading &&
           jsonResults.map(({ _id, name, tags }, i) => (
             <Card key={i} _id={_id} name={name} tags={tags} />
           ))}
-      </div>
+      </main>
     );
   }
 }

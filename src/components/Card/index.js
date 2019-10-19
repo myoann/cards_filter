@@ -15,8 +15,8 @@ function Card({ _id, name, tags }) {
 
   return (
     <div className="card" onClick={() => routeChange()}>
-      <div className="cardTitle">{name}</div>
-      <div className="cardTags">
+      <div className="card__title">{name}</div>
+      <div className="card__tags">
         {tags.map((tagLabel, i) => (
           <Tag key={i} label={tagLabel} />
         ))}

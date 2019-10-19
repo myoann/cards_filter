@@ -2,17 +2,19 @@
 module.exports = {
   extends: [
     'airbnb',
-    'plugin:jest/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:security/recommended',
     'plugin:react/recommended',
     'prettier',
-    'prettier/react'
+    'prettier/react',
   ],
   parser: 'babel-eslint',
   env: {
     browser: true,
     node: true,
   },
-  plugins: ['security', 'jsx-a11y', 'react']
+  rules: {
+    'no-unused-vars': ['error', { vars: 'local' }],
+  },
+  plugins: ['security', 'jest', 'jsx-a11y', 'react'],
 };

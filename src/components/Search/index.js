@@ -8,18 +8,18 @@ import './index.css';
 
 function Search({ searchResults }) {
   return (
-    <div className="searchBar">
-      <span className="searchIconBox">
-        <MagnifierIcon className="magnifierIcon" />
+    <header className="searchbar">
+      <span className="searchbar__iconbox">
+        <MagnifierIcon className="searchbar__icon" />
       </span>
-      <span className="searchInputBox">
+      <span className="searchbar__inputbox">
         <input
           type="text"
           placeholder="Que recherchez-vous ?"
           onChange={({ target: { value } }) => searchResults(value)}
         />
       </span>
-    </div>
+    </header>
   );
 }
 

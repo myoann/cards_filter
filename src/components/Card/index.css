@@ -9,14 +9,14 @@
   cursor: pointer;
 } 
 
-.cardTitle {
+.card__title {
   text-align: center;
   margin-top: 5%;
   font-size: 14px;
   font-weight: bold;
 }
 
-.cardTags {
+.card__tags {
   position: absolute;
   top: 50%;
   display: flex;
