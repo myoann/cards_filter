@@ -27,6 +27,16 @@
   .card {
     width: 46%;
   }
+
+  .card__title {
+    margin-top: 0;
+  }
+
+  .card__tags {
+    top: 40%;
+    position: relative;
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 480px) {
