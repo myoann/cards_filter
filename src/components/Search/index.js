@@ -9,16 +9,25 @@ import './index.css';
 function Search({ searchResults }) {
   return (
     <header className="searchbar">
-      <span className="searchbar__iconbox">
+      <span
+        className="searchbar__iconbox"
+        role="img"
+        aria-label="Icone d'une loupe"
+      >
         <MagnifierIcon className="searchbar__icon" />
       </span>
-      <span className="searchbar__inputbox">
+      <form
+        className="searchbar__inputbox"
+        role="search"
+        aria-label="Sur cette page"
+      >
         <input
           type="text"
           placeholder="Que recherchez-vous ?"
           onChange={({ target: { value } }) => searchResults(value)}
+          spellcheck="false"
         />
-      </span>
+      </form>
     </header>
   );
 }

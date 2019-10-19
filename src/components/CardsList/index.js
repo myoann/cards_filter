@@ -24,7 +24,7 @@ export class CardsList extends Component {
     const { jsonResults, loading } = this.props;
 
     return (
-      <main className="cardscontainer">
+      <main className="cardscontainer" role="list">
         {!loading &&
           jsonResults.map(({ _id, name, tags }, i) => (
             <Card key={i} _id={_id} name={name} tags={tags} />
