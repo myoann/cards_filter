@@ -25,7 +25,6 @@ function Search({ searchResults }) {
           type="text"
           placeholder="Que recherchez-vous ?"
           onChange={({ target: { value } }) => searchResults(value)}
-          spellcheck="false"
         />
       </form>
     </header>
