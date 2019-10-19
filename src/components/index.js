@@ -4,7 +4,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import CardsList from './CardsList/';
 import Search from './Search/';
 import './index.css';
-const tkt="ok"
+const tkt = 'ok';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Search />
         <CardsList />
       </div>
-    </Router>   
+    </Router>
   );
 }
 

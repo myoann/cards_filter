@@ -14,5 +14,5 @@ module.exports = {
     browser: true,
     node: true,
   },
-  plugins: ['graphql', 'security', 'jest', 'jsx-a11y', 'react']
+  plugins: ['security', 'jsx-a11y', 'react']
 };
