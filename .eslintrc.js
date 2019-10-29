@@ -15,6 +15,7 @@ module.exports = {
   },
   rules: {
     'no-unused-vars': ['error', { vars: 'local' }],
+    'react/jsx-filename-extension': 0,
   },
-  plugins: ['security', 'jest', 'jsx-a11y', 'react'],
+  plugins: ['security', 'jsx-a11y', 'react'],
 };
