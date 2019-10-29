@@ -1,8 +1,8 @@
-import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 
-import CardsList from './CardsList/';
-import Search from './Search/';
+import Search from "./Search";
+import CardsList from "./CardsList";
 
 function App() {
   return (

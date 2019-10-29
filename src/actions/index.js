@@ -1,22 +1,22 @@
-import jsonFile from '../results.json';
+import jsonFile from "../results.json";
 
 export const listJsonResults = () => async dispatch => {
-  dispatch({ type: 'JSON_RESULTS_LIST' });
+  dispatch({ type: "JSON_RESULTS_LIST" });
 
   try {
     const jsonResults = jsonFile;
 
     dispatch({
-      type: 'JSON_RESULTS_LIST_SUCCESS',
+      type: "JSON_RESULTS_LIST_SUCCESS",
       jsonResults,
     });
   } catch (error) {
-    dispatch({ type: 'JSON_RESULTS_LIST_FAILURE', error });
+    dispatch({ type: "JSON_RESULTS_LIST_FAILURE", error });
   }
 };
 
 export const searchResults = searchText => async dispatch => {
-  dispatch({ type: 'SEARCH_JSON_RESULTS_LIST' });
+  dispatch({ type: "SEARCH_JSON_RESULTS_LIST" });
 
   try {
     const filteredResults = jsonFile.filter(({ name, tags }) => {
@@ -39,10 +39,10 @@ export const searchResults = searchText => async dispatch => {
     });
 
     dispatch({
-      type: 'SEARCH_JSON_RESULTS_LIST_SUCCESS',
+      type: "SEARCH_JSON_RESULTS_LIST_SUCCESS",
       filteredResults,
     });
   } catch (error) {
-    dispatch({ type: 'SEARCH_JSON_RESULTS_LIST_FAILURE', error });
+    dispatch({ type: "SEARCH_JSON_RESULTS_LIST_FAILURE", error });
   }
 };

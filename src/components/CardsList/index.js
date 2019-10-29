@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
 
-import * as actions from '../../actions';
+import * as actions from "../../actions";
 
-import './index.scss';
-import Card from '../Card/';
+import "./index.scss";
+import Card from "../Card";
 
 const mapStateToProps = ({ jsonResults }) => ({
   jsonResults: jsonResults.jsonResults,
 });
 
-export class CardsList extends Component {
+class CardsList extends Component {
   componentDidMount = () => {
     const { jsonResults, listJsonResults } = this.props;
 
@@ -26,16 +26,27 @@ export class CardsList extends Component {
     return (
       <main className="cardscontainer" role="list">
         {!loading &&
-          jsonResults.map(({ _id, name, tags }, i) => (
-            <Card key={i} _id={_id} name={name} tags={tags} />
+          jsonResults.map(({ _id, name, tags }) => (
+            <Card key={_id} _id={_id} name={name} tags={tags} />
           ))}
       </main>
     );
   }
 }
 
+CardsList.defaultProps = {
+  jsonResults: [],
+  loading: false,
+};
+
 CardsList.propTypes = {
-  jsonResults: PropTypes.array,
+  jsonResults: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string,
+      name: PropTypes.number,
+      tags: PropTypes.arrayOf(PropTypes.string),
+    }),
+  ),
   loading: PropTypes.bool,
   listJsonResults: PropTypes.func.isRequired,
 };

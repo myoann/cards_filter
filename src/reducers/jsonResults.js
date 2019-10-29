@@ -5,21 +5,21 @@ const initialState = {
 
 const jsonResults = (state = initialState, action) => {
   switch (action.type) {
-    case 'JSON_RESULTS_LIST': {
+    case "JSON_RESULTS_LIST": {
       return { ...state, loading: true, error: null };
     }
-    case 'JSON_RESULTS_LIST_SUCCESS': {
+    case "JSON_RESULTS_LIST_SUCCESS": {
       const { jsonResults } = action;
       return { ...state, jsonResults, loading: false, error: null };
     }
-    case 'JSON_RESULTS_LIST_FAILURE': {
+    case "JSON_RESULTS_LIST_FAILURE": {
       const { error } = action;
       return { ...state, loading: false, error };
     }
-    case 'SEARCH_JSON_RESULTS_LIST': {
+    case "SEARCH_JSON_RESULTS_LIST": {
       return { ...state, loading: true, error: null };
     }
-    case 'SEARCH_JSON_RESULTS_LIST_SUCCESS': {
+    case "SEARCH_JSON_RESULTS_LIST_SUCCESS": {
       const { filteredResults } = action;
       return {
         ...state,
@@ -28,7 +28,7 @@ const jsonResults = (state = initialState, action) => {
         error: null,
       };
     }
-    case 'SEARCH_JSON_RESULTS_LIST_FAILURE': {
+    case "SEARCH_JSON_RESULTS_LIST_FAILURE": {
       const { error } = action;
       return { ...state, loading: false, error };
     }
